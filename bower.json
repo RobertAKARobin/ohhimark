@@ -17,6 +17,7 @@
   "dependencies": {
     "angular": "^1.5.9",
     "firebase": "^3.6.2",
-    "angularfire": "^2.1.0"
+    "angularfire": "^2.1.0",
+    "roboto-fontface": "^0.6.0"
   }
 }

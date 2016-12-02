@@ -1,0 +1,109 @@
+$f:16px;
+$lh:24px;
+$pw:15px;
+$ph:10px;
+
+$convo-width:300px;
+$nav-height:50px;
+
+$c-blue:#039be5;
+$c-black:#212121;
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: inherit;
+	font-weight: inherit;
+	font-family: inherit;
+	font-style: inherit;
+	text-decoration: inherit;
+	line-height: inherit;
+	color: inherit;
+
+	&:focus{
+		outline:none;
+	}
+}
+
+html, body{
+	width:100%;
+	height:100%;
+	font-family:Roboto, sans-serif;
+	font-size:$f;
+	line-height:$lh;
+	color:$c-black;
+	background-color:$c-blue;
+}
+
+body{
+	overflow-x:scroll;
+	overflow-y:hidden;
+}
+
+a{
+	cursor:pointer;
+
+	&.ctrl:focus{
+		color:$c-blue;
+		text-shadow:2px 2px 1px #ccc;
+	}
+}
+
+div{
+	position:relative;
+}
+
+input{
+	height:$lh;
+	border-bottom:1px solid #ccc;
+}
+
+nav{
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	line-height:$nav-height;
+	padding:0 $pw;
+	background-color:#fff;
+}
+
+main{
+	width:100%;
+	height:100%;
+	padding-top:$nav-height;
+	box-sizing:border-box;
+}
+
+main.convos{
+	display:flex;
+
+	& > *{
+		flex-shrink:0;
+	}
+
+	& > .border{
+		flex-basis:50px;
+	}
+
+	& > .convo{
+		flex-basis:$convo-width;
+		margin:$pw;
+	}
+}
+
+.convo{
+	width:$convo-width;
+	background-color:#fff;
+	box-sizing:border-box;
+
+	& > *{
+		padding:$ph $pw;
+	}
+
+	& > header{
+		background-color:$c-black;
+		color:#fff;
+	}
+}

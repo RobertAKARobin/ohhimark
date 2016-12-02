@@ -7,6 +7,9 @@
 			'firebase'
 		])
 		.constant('ENV', __env)
+		.constant('REF', {
+			convo: '/convos'
+		})
 		.config(config);
 
 	config.$inject = ['ENV'];
